@@ -13,13 +13,16 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-%prediction = 
-%disp(theta)
-%disp(y)
-%disp(X)
-%J = 1
-%J = 1/2m * 
+%prediction = X*theta;
+%dif = prediction - y;
+%sqdif = dif.^2;
+%tsqdif = sum(sqdif);
+%J = tsqdif / (2*m);
 
+prediction = X*theta;
+dif = prediction - y;
+tsqdif = dif' * dif;
+J = tsqdif / (2*m);
 
 % =========================================================================
 

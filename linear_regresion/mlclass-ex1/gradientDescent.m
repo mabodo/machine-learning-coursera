@@ -20,7 +20,6 @@ for iter = 1:num_iters
     theta_temp = zeros(size(theta));
     v_error = X*theta - y;
     for j = 1:n
-        %alpha * (v_error') * X(:,j) / m
         theta_temp(j) = theta(j) - alpha * (v_error') * X(:,j) / m;
     end
 

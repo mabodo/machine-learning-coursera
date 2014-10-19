@@ -26,17 +26,10 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
-X
+%this code need broadcasting to be used so a octave>=3.6
 mu = mean(X);
 sigma = std(X);
-
 X_norm = (X - mu) ./ sigma;
-
-
-
-
-
-
 
 % ============================================================
 
